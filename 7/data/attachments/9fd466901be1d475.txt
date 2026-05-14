@@ -1,0 +1,4 @@
+INFO     api_tests:base_client.py:31 POST request: https://dummyjson.com/carts/add
+INFO     api_tests:base_client.py:32 Request body: {'userId': 999999, 'products': [{'id': 1, 'quantity': 1}]}
+INFO     api_tests:base_client.py:41 Response status: 404
+INFO     api_tests:base_client.py:42 Response body: {"message":"User with id '999999' not found"}

@@ -1,0 +1,4 @@
+INFO     api_tests:base_client.py:31 POST request: https://dummyjson.com/auth/login
+INFO     api_tests:base_client.py:32 Request body: {'username': 'emilys', 'password': 'wrong_pass'}
+INFO     api_tests:base_client.py:41 Response status: 400
+INFO     api_tests:base_client.py:42 Response body: {"message":"Invalid credentials"}
