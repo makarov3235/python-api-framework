@@ -1,5 +1,8 @@
 name: API Tests
 
+permissions:
+  contents: write
+
 on:
   push:
 
