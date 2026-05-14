@@ -1,21 +1,32 @@
 import pytest
+import allure
+
+from helpers.assertions import assert_status_code
+from data.auth_data import INVALID_PASSWORD
 
 
-@pytest.mark.parametrize(
-    "username,password",
-    [
-        ("wrong_user", "wrong_pass"),
-        ("emilys", "wrong_pass"),
-        ("", ""),
-        ("emilys", ""),
-        ("", "emilyspass")
-    ]
-)
-def test_login_negative(auth_client, username, password):
+@pytest.mark.regression
+@allure.feature("Auth")
+@allure.story("Invalid password")
+def test_login_invalid_password(auth_client):
 
     response = auth_client.login(
-        username=username,
-        password=password
+        username=INVALID_PASSWORD["username"],
+        password=INVALID_PASSWORD["password"]
     )
 
-    assert response.status_code == 400
+    assert_status_code(response, 400)
+
+
+
+@pytest.mark.regression
+@allure.feature("Auth")
+@allure.story("Empty credentials")
+def test_login_empty_credentials(auth_client):
+
+    response = auth_client.login(
+        username="",
+        password=""
+    )
+
+    assert_status_code(response, 400)

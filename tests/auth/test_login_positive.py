@@ -1,3 +1,4 @@
+import pytest
 import allure
 
 from helpers.assertions import (
@@ -8,6 +9,7 @@ from helpers.assertions import (
 from helpers.schema_validator import validate_schema
 
 
+@pytest.mark.smoke
 @allure.feature("Auth")
 @allure.story("Positive login")
 def test_success_login(auth_client):
@@ -25,3 +27,17 @@ def test_success_login(auth_client):
         data=response.json(),
         schema_path="schemas/login_schema.json"
     )
+
+@pytest.mark.regression
+@allure.feature("Auth")
+@allure.story("Check response time")
+def test_login_response_time(auth_client, valid_user):
+
+    response = auth_client.login(
+        username=valid_user["username"],
+        password=valid_user["password"]
+    )
+
+    response_time = response.elapsed.total_seconds()
+
+    assert response_time < 3
