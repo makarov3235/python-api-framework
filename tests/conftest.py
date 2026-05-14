@@ -27,3 +27,18 @@ def auth_token(auth_client, valid_user):
     body = response.json()
 
     return body["accessToken"]
+
+from clients.products_client import ProductsClient
+from clients.carts_client import CartsClient
+
+
+@pytest.fixture
+def products_client():
+
+    return ProductsClient()
+
+
+@pytest.fixture
+def carts_client():
+
+    return CartsClient()

@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "price",
+    "stock",
+    "rating",
+    "category"
+  ]
+}

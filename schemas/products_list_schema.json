@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": [
+    "products",
+    "total",
+    "skip",
+    "limit"
+  ]
+}

@@ -11,20 +11,15 @@ class BaseClient:
         self.base_url = BASE_URL
 
     @retry(times=3, delay=2)
-    def get(self, endpoint, headers=None):
-
+    def get(self, endpoint, headers=None, params=None):
         url = f"{self.base_url}{endpoint}"
-
-        logger.info(f"GET request: {url}")
 
         response = requests.get(
             url=url,
             headers=headers,
+            params=params,
             timeout=TIMEOUT
         )
-
-        logger.info(f"Response status: {response.status_code}")
-        logger.info(f"Response body: {response.text}")
 
         return response
 
