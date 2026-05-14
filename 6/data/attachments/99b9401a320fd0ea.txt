@@ -1,0 +1,4 @@
+INFO     api_tests:base_client.py:36 POST request: https://dummyjson.com/auth/login
+INFO     api_tests:base_client.py:37 Request body: {'username': '', 'password': ''}
+INFO     api_tests:base_client.py:46 Response status: 400
+INFO     api_tests:base_client.py:47 Response body: {"message":"Username and password required"}

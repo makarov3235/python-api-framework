@@ -1,0 +1,7 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","","0","","5","0","","0"
+"0","","0","Auth","1","0","Check response time","0"
+"0","","0","Auth","1","0","Invalid password","0"
+"0","","0","Auth","1","0","Empty credentials","0"
+"0","","0","Auth","1","0","Positive login","0"
+"0","","0","Auth","1","0","Get current user","0"
