@@ -1,0 +1,4 @@
+INFO     api_tests:base_client.py:31 POST request: https://dummyjson.com/carts/add
+INFO     api_tests:base_client.py:32 Request body: {'userId': 1, 'products': [{'id': 999999, 'quantity': 1}]}
+INFO     api_tests:base_client.py:41 Response status: 201
+INFO     api_tests:base_client.py:42 Response body: {"id":209,"products":[],"total":0,"discountedTotal":0,"userId":1,"totalProducts":0,"totalQuantity":0}

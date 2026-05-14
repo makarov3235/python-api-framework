@@ -1,0 +1,4 @@
+INFO     api_tests:base_client.py:31 POST request: https://dummyjson.com/carts/add
+INFO     api_tests:base_client.py:32 Request body: {'userId': 1, 'products': []}
+INFO     api_tests:base_client.py:41 Response status: 400
+INFO     api_tests:base_client.py:42 Response body: {"message":"products can not be empty"}
