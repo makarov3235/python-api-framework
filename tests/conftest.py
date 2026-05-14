@@ -42,3 +42,11 @@ def products_client():
 def carts_client():
 
     return CartsClient()
+
+from clients.search_client import SearchClient
+
+
+@pytest.fixture
+def search_client():
+
+    return SearchClient()
